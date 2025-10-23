@@ -79,15 +79,59 @@ docker compose -f docker-compose.yml up -d
 
 ---
 
-## 🧪 Fase 4 — Validar salud del contenedor
+## 🧠 Fase 3.5 — Ejecutar entorno de desarrollo con script validado
 
 ```bash
-./scripts/validar-healthcheck.sh
+./scripts/run-dev.sh
 ```
 
-📂 Archivos: `scripts/validar-healthcheck.sh`, `main.go`  
-🎯 Verifica que el contenedor esté `healthy` y que el endpoint `/health` responda correctamente  
-📚 “Docker monitorea servicios con `HEALTHCHECK`, y nosotros lo validamos manualmente.”
+📂 Archivos: `scripts/run-dev.sh`, `app/app`, `docker-compose.override.yml`  
+🎯 Compila el binario Go localmente, levanta el contenedor en modo desarrollo y valida el endpoint `/health`  
+📚 “Este script automatiza la preparación del entorno de desarrollo, asegurando compatibilidad con distroless y validación completa del stack.”
+
+✅ Log esperado:
+
+```
+🌍 Entorno activo: development
+{"status":"ok"}
+```
+
+---
+
+## 🚀 Fase 4 — Ejecutar entorno de producción
+
+```bash
+./scripts/run-prod.sh
+```
+
+📂 Archivos: `scripts/run-prod.sh`, `docker-compose.yml`  
+🎯 Levanta el contenedor en modo producción, sin override, usando la imagen distroless  
+📚 “Este script valida el entorno de producción real, sin volúmenes ni compilación local. Ideal para despliegue seguro y reproducible.”
+
+✅ Log esperado:
+
+```
+🌍 Entorno activo: production
+{"status":"ok"}
+```
+
+## ✅ Fase 4.1 — Validar entorno de producción
+
+```bash
+./scripts/validar-prod.sh
+```
+
+📂 Archivos: `scripts/validar-prod.sh`, `docker-compose.yml`  
+🎯 Verifica que el contenedor esté corriendo en modo producción y que el endpoint `/health` responda correctamente  
+📚 “Este script confirma que el entorno de producción está activo, funcional y seguro. Validamos sin depender de herramientas internas del contenedor distroless.”
+
+✅ Log esperado:
+
+```
+🌍 Entorno activo: production
+{"status":"ok"}
+```
+
 
 ---
 

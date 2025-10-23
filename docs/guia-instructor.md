@@ -62,17 +62,62 @@ docker compose -f docker-compose.yml up -d
 ✅ Usa solo `docker-compose.yml`  
 📚 “En producción usamos imagen distroless, sin volumen montado, y `APP_ENV=production`.”
 
+
 ---
 
-## 🧪 Paso 5 — Validar salud del contenedor
+## 🧠 Paso 4.5 — Ejecutar entorno de desarrollo con script validado
 
 ```bash
-./scripts/validar-healthcheck.sh
+./scripts/run-dev.sh
 ```
 
-📂 Archivos: `scripts/validar-healthcheck.sh`, `main.go`  
-🎯 Verifica que el contenedor esté `healthy` y que el endpoint `/health` responda correctamente  
-📚 “Docker monitorea servicios con `HEALTHCHECK`, y nosotros lo validamos manualmente.”
+📂 Archivos: `scripts/run-dev.sh`, `app/app`, `docker-compose.override.yml`  
+🎯 Compila el binario Go con flags compatibles (`GOOS=linux`, `GOARCH=amd64`, `CGO_ENABLED=0`), levanta el contenedor y valida el endpoint `/health`  
+📚 “Este script automatiza el flujo de desarrollo, evitando errores de volumen y asegurando compatibilidad con imágenes distroless.”
+
+✅ Validación esperada:
+
+```
+🌍 Entorno activo: development
+{"status":"ok"}
+```
+
+---
+
+## 🚀 Paso 5 — Ejecutar entorno de producción
+
+```bash
+./scripts/run-prod.sh
+```
+
+📂 Archivos: `scripts/run-prod.sh`, `docker-compose.yml`  
+🎯 Levanta el contenedor sin override, usando la imagen distroless con `APP_ENV=production`  
+📚 “Este paso valida el entorno de producción real, sin volúmenes ni compilación local. Ideal para enseñar despliegue seguro y reproducible.”
+
+✅ Validación esperada:
+
+```
+🌍 Entorno activo: production
+{"status":"ok"}
+```
+
+## ✅ Paso 5.1 — Validar entorno de producción
+
+```bash
+./scripts/validar-prod.sh
+```
+
+📂 Archivos: `scripts/validar-prod.sh`, `docker-compose.yml`  
+🎯 Verifica que el contenedor esté corriendo en modo producción y que el endpoint `/health` responda correctamente  
+📚 “Este paso confirma que el entorno de producción está activo y funcional. Validamos desde fuera del contenedor, ya que distroless no permite comandos internos.”
+
+✅ Validación esperada:
+
+```
+🌍 Entorno activo: production
+{"status":"ok"}
+```
+
 
 ---
 

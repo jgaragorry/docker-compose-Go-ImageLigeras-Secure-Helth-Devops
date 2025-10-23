@@ -14,7 +14,7 @@ ARCHIVOS=(
   "README.md"
   "README-GUIA.md"
   "docs/guia-detallada-del-workshop.md"
-  "guia-instructor.md"
+  "docs/guia-instructor.md"
   "scripts/build-and-run.sh"
   "scripts/validar-healthcheck.sh"
   "scripts/reset-workshop.sh"

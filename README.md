@@ -74,3 +74,23 @@ Go permite compilar binarios autónomos, ideales para imágenes distroless. Esto
 - [README-GUIA.md](README-GUIA.md): guía paso a paso con explicaciones didácticas
 - [docs/estructura-del-workshop.md](docs/estructura-del-workshop.md): explicación de cada archivo
 
+---
+
+## 👤 Autor y Comunidad
+
+**José Garagorry**  
+Educador técnico, creador de workshops reproducibles y defensor de buenas prácticas DevOps.
+
+[![GitHub](https://img.shields.io/badge/GitHub-Jos%C3%A9%20Garagorry-black?logo=github)](https://github.com/JoseGaragorry)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Jos%C3%A9%20Garagorry-blue?logo=linkedin)](https://www.linkedin.com/in/JoseGaragorry)
+[![YouTube](https://img.shields.io/badge/YouTube-Jos%C3%A9%20Garagorry-red?logo=youtube)](https://www.youtube.com/@JoseGaragorry)
+[![TikTok](https://img.shields.io/badge/TikTok-Jos%C3%A9%20Garagorry-black?logo=tiktok)](https://www.tiktok.com/@JoseGaragorry)
+[![WhatsApp Comunidad](https://img.shields.io/badge/WhatsApp-Comunidad-green?logo=whatsapp)](https://chat.whatsapp.com/tu-enlace-de-comunidad)
+
+---
+
+## ⭐ Apoya el proyecto
+
+Si este workshop te ayudó, considera darle una estrella ⭐ al repositorio o compartirlo con otros instructores y estudiantes.
+
+

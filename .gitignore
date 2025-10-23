@@ -1,0 +1,13 @@
+# Go
+/app/app
+/app/*.log
+
+# Node leftovers (por si se copia algo)
+/node_modules
+npm-debug.log
+
+# Docker
+*.tar
+*.gz
+.env
+

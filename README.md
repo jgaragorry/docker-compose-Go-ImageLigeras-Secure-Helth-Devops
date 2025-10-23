@@ -76,16 +76,25 @@ Go permite compilar binarios autónomos, ideales para imágenes distroless. Esto
 
 ---
 
+---
+
 ## 👤 Autor y Comunidad
 
 **José Garagorry**  
 Educador técnico, creador de workshops reproducibles y defensor de buenas prácticas DevOps.
 
-[![GitHub](https://img.shields.io/badge/GitHub-Jos%C3%A9%20Garagorry-black?logo=github)](https://github.com/JoseGaragorry)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Jos%C3%A9%20Garagorry-blue?logo=linkedin)](https://www.linkedin.com/in/JoseGaragorry)
-[![YouTube](https://img.shields.io/badge/YouTube-Jos%C3%A9%20Garagorry-red?logo=youtube)](https://www.youtube.com/@JoseGaragorry)
-[![TikTok](https://img.shields.io/badge/TikTok-Jos%C3%A9%20Garagorry-black?logo=tiktok)](https://www.tiktok.com/@JoseGaragorry)
-[![WhatsApp Comunidad](https://img.shields.io/badge/WhatsApp-Comunidad-green?logo=whatsapp)](https://chat.whatsapp.com/tu-enlace-de-comunidad)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Jos%C3%A9%20Garagorry-blue?logo=linkedin)](https://www.linkedin.com/in/jgaragorry/)
+[![YouTube](https://img.shields.io/badge/YouTube-Softraincorp-red?logo=youtube)](https://www.youtube.com/@Softraincorp)
+[![TikTok](https://img.shields.io/badge/TikTok-Softtraincorp-black?logo=tiktok)](https://www.tiktok.com/@softtraincorp)
+[![Instagram](https://img.shields.io/badge/Instagram-STCLatam-purple?logo=instagram)](https://www.instagram.com/stclatam/)
+[![WhatsApp Comunidad](https://img.shields.io/badge/WhatsApp-Comunidad-green?logo=whatsapp)](https://chat.whatsapp.com/ENuRMnZ38fv1pk0mHlSixa)
+
+---
+
+## ⭐ Apoya el proyecto
+
+Si este workshop te ayudó, considera darle una estrella ⭐ al repositorio o compartirlo con otros instructores y estudiantes.
+
 
 ---
 

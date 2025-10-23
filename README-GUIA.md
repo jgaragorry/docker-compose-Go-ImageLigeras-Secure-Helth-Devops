@@ -132,6 +132,16 @@ docker compose -f docker-compose.yml up -d
 {"status":"ok"}
 ```
 
+## 🧩 Comparación de scripts del workshop
+
+Esta tabla resume los scripts clave del workshop, sus propósitos, entornos, validaciones y beneficios didácticos. Útil para entender cómo se separan desarrollo, producción y limpieza total.
+
+| Script                  | Entorno       | Acción principal                              | ¿Compila binario? | ¿Usa override? | ¿Expone puerto? | Validación incluida | Uso didáctico clave                                                                 |
+|------------------------|---------------|-----------------------------------------------|-------------------|----------------|------------------|----------------------|-------------------------------------------------------------------------------------|
+| `run-dev.sh`           | Desarrollo    | Compila binario local y levanta contenedor    | ✅ Sí              | ✅ Sí           | `8081:8080`       | ✅ `/health` + logs   | Enseña montaje de volúmenes, compilación cruzada y validación en distroless        |
+| `run-prod.sh`          | Producción    | Levanta contenedor con imagen distroless      | ❌ No              | ❌ No           | `8080:8080`       | ✅ `/health` + logs   | Enseña despliegue seguro, sin dependencias locales ni override                     |
+| `reset-workshop.sh`    | Ambos         | Elimina contenedores, imágenes, redes, binario| ❌ No              | ❌ No           | ❌                | ✅ Verificación final | Enseña reproducibilidad, limpieza total y control de residuos                      |
+| `validar-prod.sh`      | Producción    | Verifica `/health` y entorno desde logs       | ❌ No              | ❌ No           | `8080`            | ✅ `/health` + logs   | Enseña validación externa en distroless sin acceso shell                           |
 
 ---
 
